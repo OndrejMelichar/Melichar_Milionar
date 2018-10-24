@@ -16,14 +16,20 @@ using System.Windows.Shapes;
 namespace Melichar_Milionar
 {
     /// <summary>
-    /// Interakční logika pro MainWindow.xaml
+    /// Interakční logika pro HraStranka.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HraStranka : Page
     {
-        public MainWindow()
+        private Frame hlavniFrame;
+
+        public HraStranka()
         {
             InitializeComponent();
-            hlavniFrame.Navigate(new HraStranka(hlavniFrame));
+        }
+
+        public HraStranka(Frame hlavniFrame) : this() //volá instanci bez parametru   (ještě base)
+        {
+            this.hlavniFrame = hlavniFrame;
         }
     }
 }
