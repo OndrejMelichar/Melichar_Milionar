@@ -31,5 +31,25 @@ namespace Melichar_Milionar
         {
             this.hlavniFrame = hlavniFrame;
         }
+
+        private void moznostAButton_Click(object sender, RoutedEventArgs e)
+        {
+            pomoc.Content = "A";
+        }
+
+        private void moznostBButton_Click(object sender, RoutedEventArgs e)
+        {
+            pomoc.Content = "B";
+        }
+
+        private void moznostCButton_Click(object sender, RoutedEventArgs e)
+        {
+            pomoc.Content = "C";
+        }
+
+        private void moznostDButton_Click(object sender, RoutedEventArgs e)
+        {
+            pomoc.Content = "D";
+        }
     }
 }

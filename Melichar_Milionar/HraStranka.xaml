@@ -10,58 +10,67 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="36" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="36" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="5*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="36" />
+            <ColumnDefinition Width="144" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="144" />
+            <ColumnDefinition Width="36" />
         </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="stavTextBlock" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignDisplay2TextBlock}" FontSize="24">1250 Kč</TextBlock>        
-        
-        <TextBlock x:Name="casovacTextBlock" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignDisplay2TextBlock}">30</TextBlock>
-        <TextBlock x:Name="otazkaTextBlock" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignDisplay2TextBlock}" FontSize="32" Padding="0 10">Kolik nohou má stonožka?</TextBlock>
+        <Label x:Name="pomoc" Grid.Row="0" Grid.Column="1" Content="?" />
 
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <!--<Button Width="222" Height="80" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0">
-                <Path Data='M4 32 L14 42 L32 42 L48 42 L58 32 L48 22 L32 22 L16 22 Z' Fill="Blue" Stroke="Green" RenderTransformOrigin="0.53, 1" >
-                    <Path.RenderTransform>
-                        <ScaleTransform ScaleX="4" ScaleY="2" />
-                    </Path.RenderTransform>
-                </Path>
-            </Button>-->
+        <Button x:Name="moznostAButton" Grid.Row="3" Grid.Column="2" Content="harmonika" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostAButton_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                        <Path Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L14 42 L32 42 L48 42 L58 32 L48 22 L32 22 L16 22 Z"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="120" Width="110" x:Name="Button" Background="GreenYellow" Content="1" BorderBrush="sc#1, 0, 0, 0" Foreground="DarkGreen" FontSize="72">
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid Width="Auto" Height="Auto" x:Name="Grid">
-                            <Path Stroke="black" Fill="blue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L14 42 L32 42 L48 42 L58 32 L48 22 L32 22 L16 22 Z"/>
-                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-            
-            <!-- user control / něco na způsob class v CSS abych nemuset toto pořád kopírovat-->
+        <Button x:Name="moznostBButton" Grid.Row="3" Grid.Column="3" Content="harmonika" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostBButton_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                        <Path Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L14 42 L32 42 L48 42 L58 32 L48 22 L32 22 L16 22 Z"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-            <!-- http://jxnblk.com/paths/?d=M4%2032%20L14%2042%20L32%2042%20L48%2042%20L58%2032%20L48%2022%20L32%2022%20L16%2022%20Z -->
-            <!--<Button x:Name="moznostBButton" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="200" Margin="4" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Content="_DARK" />-->
-        </StackPanel>
-        
-        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="moznostCButton" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="200" Margin="4" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Content="_DARK" />
-            <Button x:Name="moznostDButton" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="200" Margin="4" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Content="_DARK" />
-        </StackPanel>
+        <Button x:Name="moznostCButton" Grid.Row="4" Grid.Column="2" Content="harmonika" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostCButton_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                        <Path Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L14 42 L32 42 L48 42 L58 32 L48 22 L32 22 L16 22 Z"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
-        <Button x:Name="vzdatSeButton" Grid.Row="4" Grid.Column="1" Content="VZDÁT SE" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="408" Margin="0 20" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" />
-        
-        
-        
+        <Button x:Name="moznostDButton" Grid.Row="4" Grid.Column="3" Content="harmonika" Foreground="White" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostDButton_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                        <Path Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L14 42 L32 42 L48 42 L58 32 L48 22 L32 22 L16 22 Z"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
     </Grid>
 </Page>
