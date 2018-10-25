@@ -27,10 +27,31 @@
         
         <TextBlock x:Name="casovacTextBlock" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignDisplay2TextBlock}">30</TextBlock>
         <TextBlock x:Name="otazkaTextBlock" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Style="{StaticResource MaterialDesignDisplay2TextBlock}" FontSize="32" Padding="0 10">Kolik nohou má stonožka?</TextBlock>
-        
+
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="moznostAButton" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="200" Margin="4" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Content="_DARK" />
-            <Button x:Name="moznostBButton" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="200" Margin="4" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Content="_DARK" />
+            <!--<Button Width="222" Height="80" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0">
+                <Path Data='M4 32 L14 42 L32 42 L48 42 L58 32 L48 22 L32 22 L16 22 Z' Fill="Blue" Stroke="Green" RenderTransformOrigin="0.53, 1" >
+                    <Path.RenderTransform>
+                        <ScaleTransform ScaleX="4" ScaleY="2" />
+                    </Path.RenderTransform>
+                </Path>
+            </Button>-->
+
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="120" Width="110" x:Name="Button" Background="GreenYellow" Content="1" BorderBrush="sc#1, 0, 0, 0" Foreground="DarkGreen" FontSize="72">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                            <Path Stroke="black" Fill="blue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L14 42 L32 42 L48 42 L58 32 L48 22 L32 22 L16 22 Z"/>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            
+            <!-- user control / něco na způsob class v CSS abych nemuset toto pořád kopírovat-->
+
+            <!-- http://jxnblk.com/paths/?d=M4%2032%20L14%2042%20L32%2042%20L48%2042%20L58%2032%20L48%2022%20L32%2022%20L16%2022%20Z -->
+            <!--<Button x:Name="moznostBButton" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="200" Margin="4" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Content="_DARK" />-->
         </StackPanel>
         
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
@@ -39,5 +60,8 @@
         </StackPanel>
 
         <Button x:Name="vzdatSeButton" Grid.Row="4" Grid.Column="1" Content="VZDÁT SE" Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="408" Margin="0 20" ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" />
+        
+        
+        
     </Grid>
 </Page>
