@@ -10,15 +10,24 @@ namespace Melichar_Milionar
 {
     class Otazkovator
     {
+        private Random random = new Random();
+        
+        private List<Otazka> otazky;
 
-        private static void nactiOtazky()
+        public Otazkovator()
+        {
+            this.otazky = this.nactiOtazky();
+        }
+
+
+        private List<Otazka> nactiOtazky()
         {
             List<Otazka> otazky = new List<Otazka>();
 
             if (File.Exists(@"D:\Ondřej Melichar\Moje data\škola\3. ročník\VAH\WPF\Melichar_Milionar\Melichar_Milionar\bin\Debug\otazky.xlsx"))
             {
                 var package = new ExcelPackage(new FileInfo(@"D:\Ondřej Melichar\Moje data\škola\3. ročník\VAH\WPF\Melichar_Milionar\Melichar_Milionar\bin\Debug\otazky.xlsx"));
-                ExcelWorksheet workSheet = package.Workbook.Worksheets["Worksheet1"];
+                ExcelWorksheet workSheet = package.Workbook.Worksheets["List1"];
                 var start = workSheet.Dimension.Start;
                 var end = workSheet.Dimension.End;
 
@@ -48,10 +57,25 @@ namespace Melichar_Milionar
 
                     otazky.Add(new Otazka(textOtazky, moznosti, uroven));
                 }
+
+                return otazky;
+            } else
+            {
+                return new List<Otazka>();
             }
+        }
 
+        public Otazka VytvorOtazku(int uroven)
+        {
+            while (true)
+            {
+                Otazka otazka = this.otazky[this.random.Next(this.otazky.Count)];
 
-            //return booksFromFile;
+                if (otazka.Uroven == uroven)
+                {
+                    return otazka;
+                }
+            }
         }
 
     }
