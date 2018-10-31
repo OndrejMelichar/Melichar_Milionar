@@ -21,14 +21,16 @@ namespace Melichar_Milionar
     public partial class HraStranka : Page
     {
         private Random random = new Random();
-
+        private Otazkovator otazkovator = new Otazkovator();
         private Frame hlavniFrame;
+        private int indexSpravneOdpovedi;
+        private int uroven = 1;
 
         public HraStranka()
         {
             InitializeComponent();
 
-            this.dalsiOtazka(1);
+            this.dalsiOtazka();
         }
 
         public HraStranka(Frame hlavniFrame) : this() //volá instanci bez parametru
@@ -38,10 +40,9 @@ namespace Melichar_Milionar
 
 
 
-        private void dalsiOtazka(int uroven)
+        private void dalsiOtazka()
         {
-            Otazkovator otazkovator = new Otazkovator();
-            Otazka otazka = otazkovator.VytvorOtazku(uroven);
+            Otazka otazka = this.otazkovator.VytvorOtazku(this.uroven);
             List<string> randomizovaneOdpovedi = this.randomizujOdpovedi(otazka.Odpovedi);
 
             otazkaTextBlock.Text = otazka.TextOtazky;
@@ -51,16 +52,39 @@ namespace Melichar_Milionar
             moznostDButton.Content = randomizovaneOdpovedi[3];
         }
 
+        private void vyhodnotOdpoved(int zvolenaMoznost)
+        {
+            pomoc.Content = zvolenaMoznost.ToString();
+
+            if (zvolenaMoznost == this.indexSpravneOdpovedi)
+            {
+                this.uroven++;
+                this.dalsiOtazka();
+            } else
+            {
+                pomoc.Content = this.indexSpravneOdpovedi;
+            }
+
+            
+        }
+
         private List<string> randomizujOdpovedi(List<string> razeneOdpovedi)
         {
             List<string> randomizovaneOdpovedi = new List<string>();
 
+            bool poprve = true;
             int randomIndex = 0;
             while (razeneOdpovedi.Count > 0)
             {
                 randomIndex = this.random.Next(0, razeneOdpovedi.Count);
                 randomizovaneOdpovedi.Add(razeneOdpovedi[randomIndex]);
                 razeneOdpovedi.RemoveAt(randomIndex);
+
+                if (poprve && randomIndex == 0)
+                {
+                    this.indexSpravneOdpovedi = randomizovaneOdpovedi.Count - 1;
+                    poprve = false;
+                }
             }
 
             return randomizovaneOdpovedi;
@@ -70,26 +94,22 @@ namespace Melichar_Milionar
 
         private void moznostAButton_Click(object sender, RoutedEventArgs e)
         {
-            pomoc.Content = "A";
-            this.dalsiOtazka(1);
+            this.vyhodnotOdpoved(0);
         }
 
         private void moznostBButton_Click(object sender, RoutedEventArgs e)
         {
-            pomoc.Content = "B";
-            this.dalsiOtazka(1);
+            this.vyhodnotOdpoved(1);
         }
 
         private void moznostCButton_Click(object sender, RoutedEventArgs e)
         {
-            pomoc.Content = "C";
-            this.dalsiOtazka(1);
+            this.vyhodnotOdpoved(2);
         }
 
         private void moznostDButton_Click(object sender, RoutedEventArgs e)
         {
-            pomoc.Content = "D";
-            this.dalsiOtazka(1);
+            this.vyhodnotOdpoved(3);
         }
     }
 }

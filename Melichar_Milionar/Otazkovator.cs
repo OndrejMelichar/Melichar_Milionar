@@ -24,9 +24,9 @@ namespace Melichar_Milionar
         {
             List<Otazka> otazky = new List<Otazka>();
 
-            if (File.Exists(@"D:\Ondřej Melichar\Moje data\škola\3. ročník\VAH\WPF\Melichar_Milionar\Melichar_Milionar\bin\Debug\otazky.xlsx"))
+            if (File.Exists(@"otazky.xlsx"))
             {
-                var package = new ExcelPackage(new FileInfo(@"D:\Ondřej Melichar\Moje data\škola\3. ročník\VAH\WPF\Melichar_Milionar\Melichar_Milionar\bin\Debug\otazky.xlsx"));
+                var package = new ExcelPackage(new FileInfo(@"otazky.xlsx"));
                 ExcelWorksheet workSheet = package.Workbook.Worksheets["List1"];
                 var start = workSheet.Dimension.Start;
                 var end = workSheet.Dimension.End;
