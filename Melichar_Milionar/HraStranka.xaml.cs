@@ -47,6 +47,7 @@ namespace Melichar_Milionar
             if (otazka != null)
             {
                 List<string> randomizovaneOdpovedi = this.randomizujOdpovedi(otazka.Odpovedi);
+                pomoc.Content = this.indexSpravneOdpovedi;
 
                 otazkaTextBlock.Text = otazka.TextOtazky;
                 moznostAButton.Content = randomizovaneOdpovedi[0];
@@ -55,24 +56,17 @@ namespace Melichar_Milionar
                 moznostDButton.Content = randomizovaneOdpovedi[3];
             } else
             {
-                pomoc.Content = "došly ty otázky";
+                pomoc.Content = "došly otázky";
             }
         }
 
         private void vyhodnotOdpoved(int zvolenaMoznost)
         {
-            pomoc.Content = zvolenaMoznost.ToString();
-
             if (zvolenaMoznost == this.indexSpravneOdpovedi)
             {
                 this.uroven++;
                 this.dalsiOtazka();
-            } else
-            {
-                pomoc.Content = this.indexSpravneOdpovedi;
             }
-
-            
         }
 
         private List<string> randomizujOdpovedi(List<string> razeneOdpovedi)
