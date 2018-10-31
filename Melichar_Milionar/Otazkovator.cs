@@ -67,6 +67,8 @@ namespace Melichar_Milionar
 
         public Otazka VytvorOtazku(int uroven)
         {
+            int i = 1;
+
             while (true)
             {
                 Otazka otazka = this.otazky[this.random.Next(this.otazky.Count)];
@@ -74,7 +76,12 @@ namespace Melichar_Milionar
                 if (otazka.Uroven == uroven)
                 {
                     return otazka;
+                } else if (i == this.otazky.Count)
+                {
+                    return null;
                 }
+
+                i++;
             }
         }
 

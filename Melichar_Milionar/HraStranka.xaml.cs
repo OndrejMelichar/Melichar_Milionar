@@ -43,13 +43,20 @@ namespace Melichar_Milionar
         private void dalsiOtazka()
         {
             Otazka otazka = this.otazkovator.VytvorOtazku(this.uroven);
-            List<string> randomizovaneOdpovedi = this.randomizujOdpovedi(otazka.Odpovedi);
 
-            otazkaTextBlock.Text = otazka.TextOtazky;
-            moznostAButton.Content = randomizovaneOdpovedi[0];
-            moznostBButton.Content = randomizovaneOdpovedi[1];
-            moznostCButton.Content = randomizovaneOdpovedi[2];
-            moznostDButton.Content = randomizovaneOdpovedi[3];
+            if (otazka != null)
+            {
+                List<string> randomizovaneOdpovedi = this.randomizujOdpovedi(otazka.Odpovedi);
+
+                otazkaTextBlock.Text = otazka.TextOtazky;
+                moznostAButton.Content = randomizovaneOdpovedi[0];
+                moznostBButton.Content = randomizovaneOdpovedi[1];
+                moznostCButton.Content = randomizovaneOdpovedi[2];
+                moznostDButton.Content = randomizovaneOdpovedi[3];
+            } else
+            {
+                pomoc.Content = "došly ty otázky";
+            }
         }
 
         private void vyhodnotOdpoved(int zvolenaMoznost)
