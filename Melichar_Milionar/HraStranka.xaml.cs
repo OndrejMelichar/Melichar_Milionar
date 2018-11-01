@@ -25,6 +25,7 @@ namespace Melichar_Milionar
         private Frame hlavniFrame;
         private int indexSpravneOdpovedi;
         private int uroven = 1;
+        private List<Path> listUrovni;
 
         public HraStranka()
         {
@@ -36,6 +37,7 @@ namespace Melichar_Milionar
         public HraStranka(Frame hlavniFrame) : this() //volá instanci bez parametru
         {
             this.hlavniFrame = hlavniFrame;
+            listUrovni = new List<Path>(new Path[] { zvyrazneni15Path, zvyrazneni14Path, zvyrazneni13Path, zvyrazneni12Path, zvyrazneni11Path, zvyrazneni10Path, zvyrazneni9Path, zvyrazneni8Path, zvyrazneni7Path, zvyrazneni6Path, zvyrazneni5Path, zvyrazneni4Path, zvyrazneni3Path, zvyrazneni2Path, zvyrazneni1Path });
         }
 
 
@@ -64,8 +66,14 @@ namespace Melichar_Milionar
         {
             if (zvolenaMoznost == this.indexSpravneOdpovedi)
             {
-                this.uroven++;
-                this.dalsiOtazka();
+                if (this.uroven < this.listUrovni.Count)
+                {
+                    this.uroven++;
+                    this.listUrovni[this.uroven - 1].Opacity = 1;
+                    this.listUrovni[this.uroven - 2].Opacity = 0;
+
+                    this.dalsiOtazka();
+                }
             }
         }
 
