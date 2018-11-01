@@ -71,22 +71,24 @@ namespace Melichar_Milionar
 
         public Otazka VytvorOtazku(int uroven)
         {
-            while (true)
+            
+            Random random = new Random();
+            List<Otazka> otazkyPodleUrovne = new List<Otazka>();
+
+            foreach (Otazka otazka in this.otazky)
             {
-                List<Otazka> otazkyPodleUrovne = this.vratOtazkyPodleUrovne(uroven);
-
-                if (otazkyPodleUrovne.Count > 0)
+                if (otazka.Uroven == uroven)
                 {
-                    Otazka otazka = otazkyPodleUrovne[this.random.Next(otazkyPodleUrovne.Count)];
-
-                    if (otazka.Uroven == uroven)
-                    {
-                        return otazka;
-                    }
-                } else
-                {
-                    return null;
+                    return otazka;
                 }
+            }
+
+            if (otazkyPodleUrovne.Count > 0)
+            {
+                return otazkyPodleUrovne[random.Next(otazkyPodleUrovne.Count)];
+            } else
+            {
+                return null;
             }
         }
 
