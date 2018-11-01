@@ -74,6 +74,9 @@ namespace Melichar_Milionar
 
                     this.dalsiOtazka();
                 }
+            } else
+            {
+                hlavniFrame.Navigate(new KonecHryStranka(hlavniFrame));
             }
         }
 

@@ -16,35 +16,25 @@ using System.Windows.Shapes;
 namespace Melichar_Milionar
 {
     /// <summary>
-    /// Interakční logika pro Menu.xaml
+    /// Interakční logika pro KonecHryStranka.xaml
     /// </summary>
-    public partial class Menu : Page
+    public partial class KonecHryStranka : Page
     {
         private Frame hlavniFrame;
 
-        public Menu()
+        public KonecHryStranka()
         {
             InitializeComponent();
         }
 
-        public Menu(Frame hlavniFrame) : this()
+        public KonecHryStranka(Frame hlavniFrame) : this()
         {
             this.hlavniFrame = hlavniFrame;
         }
 
-        private void novaHraButton_Click(object sender, RoutedEventArgs e)
+        private void pokracovatButton_Click(object sender, RoutedEventArgs e)
         {
-            hlavniFrame.Navigate(new HraStranka(hlavniFrame));
-        }
-
-        private void statistikyButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ukoncitButton_Click(object sender, RoutedEventArgs e)
-        {
-            System.Windows.Application.Current.Shutdown();
+            hlavniFrame.Navigate(new Menu(hlavniFrame));
         }
     }
 }
