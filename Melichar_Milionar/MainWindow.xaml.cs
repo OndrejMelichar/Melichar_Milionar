@@ -23,7 +23,7 @@ namespace Melichar_Milionar
         public MainWindow()
         {
             InitializeComponent();
-            hlavniFrame.Navigate(new HraStranka(hlavniFrame));
+            hlavniFrame.Navigate(new Menu(hlavniFrame));
         }
     }
 }

@@ -13,6 +13,13 @@ namespace Melichar_Milionar
         private Random random = new Random();
         
         private List<Otazka> otazky;
+        private int indexSpravneOdpovedi;
+
+        public int IndexSpravneOdpovedi
+        {
+            get { return indexSpravneOdpovedi; }
+        }
+
 
         public Otazkovator()
         {
@@ -86,25 +93,31 @@ namespace Melichar_Milionar
             if (otazkyPodleUrovne.Count > 0)
             {
                 return otazkyPodleUrovne[random.Next(otazkyPodleUrovne.Count)];
-            } else
-            {
-                return null;
             }
+
+            return null;
         }
 
-        private List<Otazka> vratOtazkyPodleUrovne(int uroven)
+        public List<string> RandomizujOdpovedi(List<string> razeneOdpovedi)
         {
-            List<Otazka> otazkyPodleUrovne = new List<Otazka>();
+            List<string> randomizovaneOdpovedi = new List<string>();
 
-            foreach (Otazka otazka in this.otazky)
+            bool poprve = true;
+            int randomIndex = 0;
+            while (razeneOdpovedi.Count > 0)
             {
-                if (otazka.Uroven == uroven)
+                randomIndex = this.random.Next(0, razeneOdpovedi.Count);
+                randomizovaneOdpovedi.Add(razeneOdpovedi[randomIndex]);
+                razeneOdpovedi.RemoveAt(randomIndex);
+
+                if (poprve && randomIndex == 0)
                 {
-                    otazkyPodleUrovne.Add(otazka);
+                    this.indexSpravneOdpovedi = randomizovaneOdpovedi.Count - 1;
+                    poprve = false;
                 }
             }
 
-            return otazkyPodleUrovne;
+            return randomizovaneOdpovedi;
         }
 
     }

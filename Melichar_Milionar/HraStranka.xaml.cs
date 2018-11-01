@@ -20,10 +20,9 @@ namespace Melichar_Milionar
     /// </summary>
     public partial class HraStranka : Page
     {
+        private Frame hlavniFrame;
         private Random random = new Random();
         private Otazkovator otazkovator = new Otazkovator();
-        private Frame hlavniFrame;
-        private int indexSpravneOdpovedi;
         private int uroven = 1;
         private List<Path> listUrovni;
 
@@ -48,8 +47,7 @@ namespace Melichar_Milionar
 
             if (otazka != null)
             {
-                List<string> randomizovaneOdpovedi = this.randomizujOdpovedi(otazka.Odpovedi);
-                pomoc.Content = this.indexSpravneOdpovedi;
+                List<string> randomizovaneOdpovedi = this.otazkovator.RandomizujOdpovedi(otazka.Odpovedi);
 
                 otazkaTextBlock.Text = otazka.TextOtazky;
                 moznostAButton.Content = randomizovaneOdpovedi[0];
@@ -58,13 +56,15 @@ namespace Melichar_Milionar
                 moznostDButton.Content = randomizovaneOdpovedi[3];
             } else
             {
-                pomoc.Content = "došly otázky";
+                //došly otázky
             }
         }
 
+
+
         private void vyhodnotOdpoved(int zvolenaMoznost)
         {
-            if (zvolenaMoznost == this.indexSpravneOdpovedi)
+            if (zvolenaMoznost == this.otazkovator.IndexSpravneOdpovedi)
             {
                 if (this.uroven < this.listUrovni.Count)
                 {
@@ -75,28 +75,6 @@ namespace Melichar_Milionar
                     this.dalsiOtazka();
                 }
             }
-        }
-
-        private List<string> randomizujOdpovedi(List<string> razeneOdpovedi)
-        {
-            List<string> randomizovaneOdpovedi = new List<string>();
-
-            bool poprve = true;
-            int randomIndex = 0;
-            while (razeneOdpovedi.Count > 0)
-            {
-                randomIndex = this.random.Next(0, razeneOdpovedi.Count);
-                randomizovaneOdpovedi.Add(razeneOdpovedi[randomIndex]);
-                razeneOdpovedi.RemoveAt(randomIndex);
-
-                if (poprve && randomIndex == 0)
-                {
-                    this.indexSpravneOdpovedi = randomizovaneOdpovedi.Count - 1;
-                    poprve = false;
-                }
-            }
-
-            return randomizovaneOdpovedi;
         }
 
 
