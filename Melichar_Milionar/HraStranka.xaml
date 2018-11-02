@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Melichar_Milionar"
       mc:Ignorable="d" 
       d:DesignHeight="660" d:DesignWidth="1024"
-      Title="HraStranka"
+      Title="Milionář"
       Background="DarkSlateGray">
 
     <Grid>
@@ -25,8 +25,8 @@
             <ColumnDefinition Width="1*" MinWidth="144" />
         </Grid.ColumnDefinitions>
 
-        
-        
+
+
         <Label x:Name="pomoc" Grid.Row="0" Grid.Column="0" Content="?" />
 
         <Grid Grid.Row="1" Grid.Column="3" Width="Auto" HorizontalAlignment="Right" Margin="12,0">
@@ -51,22 +51,22 @@
                 <ColumnDefinition Width="120" />
             </Grid.ColumnDefinitions>
 
-            <Path x:Name="zvyrazneni1Path" Grid.Row="0" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni2Path" Grid.Row="1" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni3Path" Grid.Row="2" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni4Path" Grid.Row="3" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni5Path" Grid.Row="4" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni6Path" Grid.Row="5" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni7Path" Grid.Row="6" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni8Path" Grid.Row="7" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni9Path" Grid.Row="8" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni10Path" Grid.Row="9" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni11Path" Grid.Row="10" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni12Path" Grid.Row="11" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni13Path" Grid.Row="12" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni14Path" Grid.Row="13" Grid.Column="0" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <Path x:Name="zvyrazneni15Path" Grid.Row="14" Grid.Column="0" Fill="DarkBlue" Opacity="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            
+            <Path x:Name="zvyrazneni1Path" Grid.Row="0" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni2Path" Grid.Row="1" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni3Path" Grid.Row="2" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni4Path" Grid.Row="3" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni5Path" Grid.Row="4" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni6Path" Grid.Row="5" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni7Path" Grid.Row="6" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni8Path" Grid.Row="7" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni9Path" Grid.Row="8" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni10Path" Grid.Row="9" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni11Path" Grid.Row="10" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni12Path" Grid.Row="11" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni13Path" Grid.Row="12" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni14Path" Grid.Row="13" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <Path x:Name="zvyrazneni15Path" Grid.Row="14" Grid.Column="0" Stroke="White" StrokeThickness="2" Fill="DarkBlue" Opacity="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+
             <Label Content="10 000 000 Kč" Grid.Row="0" Grid.Column="0" Foreground="YellowGreen" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" />
             <Label Content="5 000 000 Kč" Grid.Row="1" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" />
             <Label Content="2 500 000 Kč" Grid.Row="2" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" />
@@ -84,16 +84,20 @@
             <Label Content="1 000 Kč" Grid.Row="14" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" />
         </Grid>
 
+        <Line Grid.Row="2" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
+        <Line Grid.Row="3" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
+        <Line Grid.Row="4" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
+
         <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Width="Auto" Height="Auto" Margin="0,6,0,6">
-            <Path Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
-            <TextBlock x:Name="otazkaTextBlock" Text="Co spadlo podle pověsti na hlavu Newtonovi a pomohlo mu formulovat jeho slavný zákon?" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="14" FontWeight="Bold" />
+            <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
+            <TextBlock x:Name="otazkaTextBlock" Text="Co spadlo podle pověsti na hlavu Newtonovi a pomohlo mu formulovat jeho slavný zákon? Co spadlo podle pověsti na hlavu Newtonovi a pomohlo mu formulovat jeho slavný zákon?" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="14" FontWeight="Bold" />
         </Grid>
 
         <Button x:Name="moznostAButton" Grid.Row="3" Grid.Column="1" Content="harmonika v ruce piráta" Margin="0,6,6,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostAButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
-                        <Path Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
+                        <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
                     </Grid>
                 </ControlTemplate>
@@ -104,7 +108,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
-                        <Path Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
+                        <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
                     </Grid>
                 </ControlTemplate>
@@ -115,7 +119,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
-                        <Path Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
+                        <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
                     </Grid>
                 </ControlTemplate>
@@ -126,7 +130,7 @@
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
-                        <Path Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
+                        <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
                     </Grid>
                 </ControlTemplate>
