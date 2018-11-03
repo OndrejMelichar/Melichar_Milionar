@@ -77,6 +77,13 @@ namespace Melichar_Milionar
             } else
             {
                 hlavniFrame.Navigate(new KonecHryStranka(hlavniFrame));
+                
+                Hrac hrac = new Hrac();
+
+                Souborovator souborovator = new Souborovator();
+                souborovator.UlozHrace(hrac);
+
+                
             }
         }
 

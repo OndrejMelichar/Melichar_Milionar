@@ -15,6 +15,8 @@
             <RowDefinition Height="60" />
             <RowDefinition Height="12" />
             <RowDefinition Height="60" />
+            <RowDefinition Height="12" />
+            <RowDefinition Height="60" />
             <RowDefinition Height="36" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -24,14 +26,23 @@
         </Grid.ColumnDefinitions>
 
         <Line Grid.Row="1" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
-        <Line Grid.Row="3" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
+        <Line Grid.Row="5" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
 
         <Grid Grid.Row="1" Grid.Column="1"  Width="Auto" Height="Auto">
             <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L10 42 L54 42 L60 32 L54 22 L10 22 Z"/>
             <TextBlock Text="Chyba, blbečku!" TextAlignment="Center" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="28" FontWeight="Bold" />
         </Grid>
 
-        <Button x:Name="pokracovatButton" Grid.Row="3" Grid.Column="1" Content="Vrátit se do hlavního menu" Foreground="White" FontSize="20" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="pokracovatButton_Click" >
+        <!--<TextBox Grid.Row="3" Grid.Column="1">
+            
+        </TextBox>-->
+        
+        <Grid Grid.Row="3" Grid.Column="1"  Width="Auto" Height="Auto">
+            <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L10 42 L54 42 L60 32 L54 22 L10 22 Z"/>
+            <TextBox Text="Chyba, blbečku!"  TextAlignment="Center" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="30,0" TextWrapping="Wrap" FontSize="20" FontWeight="Bold" />
+        </Grid>
+
+        <Button x:Name="pokracovatButton" Grid.Row="5" Grid.Column="1" Content="Vrátit se do hlavního menu" Foreground="White" FontSize="20" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="pokracovatButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
