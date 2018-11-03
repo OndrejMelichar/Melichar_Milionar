@@ -53,6 +53,7 @@ namespace Melichar_Milionar
 
             bool poprve = true;
             int randomIndex = 0;
+
             while (razeneOdpovedi.Count > 0)
             {
                 randomIndex = this.random.Next(0, razeneOdpovedi.Count);

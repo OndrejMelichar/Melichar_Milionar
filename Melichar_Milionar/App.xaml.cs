@@ -13,5 +13,6 @@ namespace Melichar_Milionar
     /// </summary>
     public partial class App : Application
     {
+        public static int Uroven = 1;
     }
 }

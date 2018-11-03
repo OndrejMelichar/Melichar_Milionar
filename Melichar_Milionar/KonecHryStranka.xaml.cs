@@ -34,6 +34,20 @@ namespace Melichar_Milionar
 
         private void pokracovatButton_Click(object sender, RoutedEventArgs e)
         {
+            Hrac hrac = new Hrac();
+            hrac.Jmeno = jmenoTextBox.Text;
+
+            if (hrac.Jmeno.Length == 0)
+            {
+                hrac.Jmeno = "Bezejmenný";
+            }
+
+            hrac.Skore = App.Uroven;
+            hrac.Datum = DateTime.Now.ToString("dd. MM. yyyy hh:mm:ss");
+
+            Souborovator souborovator = new Souborovator();
+            souborovator.UlozHrace(hrac);
+
             hlavniFrame.Navigate(new Menu(hlavniFrame));
         }
     }

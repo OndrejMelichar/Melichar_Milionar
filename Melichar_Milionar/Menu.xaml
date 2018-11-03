@@ -37,7 +37,7 @@
             <TextBlock x:Name="otazkaTextBlock" Text="Milijardář" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="28" FontWeight="Bold" />
         </Grid>
 
-        <Button x:Name="novaHraButton" Grid.Row="3" Grid.Column="1" Content="Nová hra" Foreground="White" FontSize="20" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="novaHraButton_Click" >
+        <Button x:Name="novaHraButton" Grid.Row="3" Grid.Column="1" Content="Nová hra" Foreground="White" FontSize="20" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" Click="novaHraButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -48,7 +48,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="statistikyButton" Grid.Row="5" Grid.Column="1" Content="Statistiky" Foreground="White" FontSize="20" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="statistikyButton_Click" >
+        <Button x:Name="statistikyButton" Grid.Row="5" Grid.Column="1" Content="Statistiky" Foreground="White" FontSize="20" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" Click="statistikyButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -59,7 +59,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="ukoncitButton" Grid.Row="7" Grid.Column="1" Content="Ukončit" Foreground="White" FontSize="20" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="ukoncitButton_Click" >
+        <Button x:Name="ukoncitButton" Grid.Row="7" Grid.Column="1" Content="Ukončit" Foreground="White" FontSize="20" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" Click="ukoncitButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">

@@ -91,7 +91,7 @@
 
 
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
-            <Button x:Name="ukoncitHruButton" Content="vzdát se" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" >
+            <Button x:Name="ukoncitHruButton" Content="vzdát se" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" >
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -102,7 +102,7 @@
                 </Button.Template>
             </Button>
 
-            <Button x:Name="napovedaAButton" Content="1/2" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" >
+            <Button x:Name="napovedaAButton" Content="1/2" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" >
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -121,7 +121,7 @@
             <TextBlock x:Name="otazkaTextBlock" Text="Co spadlo podle pověsti na hlavu Newtonovi a pomohlo mu formulovat jeho slavný zákon? Co spadlo podle pověsti na hlavu Newtonovi a pomohlo mu formulovat jeho slavný zákon?" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="14" FontWeight="Bold" />
         </Grid>
 
-        <Button x:Name="moznostAButton" Grid.Row="4" Grid.Column="1" Content="harmonika v ruce piráta" Margin="0,6,6,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostAButton_Click" >
+        <Button x:Name="moznostAButton" Grid.Row="4" Grid.Column="1" Content="harmonika v ruce piráta" Margin="0,6,6,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" Click="moznostAButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -132,7 +132,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="moznostBButton" Grid.Row="4" Grid.Column="2" Content="harmonika" Margin="6,6,0,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostBButton_Click" >
+        <Button x:Name="moznostBButton" Grid.Row="4" Grid.Column="2" Content="harmonika" Margin="6,6,0,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" Click="moznostBButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -143,7 +143,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="moznostCButton" Grid.Row="5" Grid.Column="1" Content="harmonika" Margin="0,6,6,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostCButton_Click" >
+        <Button x:Name="moznostCButton" Grid.Row="5" Grid.Column="1" Content="harmonika" Margin="0,6,6,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" Click="moznostCButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -154,7 +154,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="moznostDButton" Grid.Row="5" Grid.Column="2" Content="harmonika" Margin="6,6,0,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostDButton_Click" >
+        <Button x:Name="moznostDButton" Grid.Row="5" Grid.Column="2" Content="harmonika" Margin="6,6,0,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" Click="moznostDButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">

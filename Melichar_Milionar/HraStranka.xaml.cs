@@ -23,7 +23,6 @@ namespace Melichar_Milionar
         private Frame hlavniFrame;
         private Random random = new Random();
         private Otazkovator otazkovator = new Otazkovator();
-        private int uroven = 1;
         private List<Path> listUrovni;
 
         public HraStranka()
@@ -43,7 +42,7 @@ namespace Melichar_Milionar
 
         private void dalsiOtazka()
         {
-            Otazka otazka = this.otazkovator.VytvorOtazku(this.uroven);
+            Otazka otazka = this.otazkovator.VytvorOtazku(App.Uroven);
 
             if (otazka != null)
             {
@@ -66,24 +65,17 @@ namespace Melichar_Milionar
         {
             if (zvolenaMoznost == this.otazkovator.IndexSpravneOdpovedi)
             {
-                if (this.uroven < this.listUrovni.Count)
+                if (App.Uroven < this.listUrovni.Count)
                 {
-                    this.uroven++;
-                    this.listUrovni[this.uroven - 1].Opacity = 1;
-                    this.listUrovni[this.uroven - 2].Opacity = 0;
+                    App.Uroven++;
+                    this.listUrovni[App.Uroven - 1].Opacity = 1;
+                    this.listUrovni[App.Uroven - 2].Opacity = 0;
 
                     this.dalsiOtazka();
                 }
             } else
             {
                 hlavniFrame.Navigate(new KonecHryStranka(hlavniFrame));
-                
-                Hrac hrac = new Hrac();
-
-                Souborovator souborovator = new Souborovator();
-                souborovator.UlozHrace(hrac);
-
-                
             }
         }
 
