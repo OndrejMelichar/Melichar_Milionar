@@ -12,6 +12,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="36" />
+            <RowDefinition Height="24" />
             <RowDefinition Height="1*" MinHeight="400" />
             <RowDefinition Height="auto" MinHeight="40" />
             <RowDefinition Height="48" />
@@ -24,12 +25,10 @@
             <ColumnDefinition Width="10*" MaxWidth="360" />
             <ColumnDefinition Width="1*" MinWidth="144" />
         </Grid.ColumnDefinitions>
+       
+        
 
-
-
-        <Label x:Name="pomoc" Grid.Row="0" Grid.Column="0" Content="?" />
-
-        <Grid Grid.Row="1" Grid.Column="3" Width="Auto" HorizontalAlignment="Right" Margin="12,0">
+        <Grid Grid.Row="2" Grid.Column="3" Width="Auto" HorizontalAlignment="Right" Margin="12,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
@@ -84,16 +83,45 @@
             <Label Content="1 000 Kč" Grid.Row="14" Grid.Column="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" />
         </Grid>
 
-        <Line Grid.Row="2" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
+        <Line Grid.Row="1" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
         <Line Grid.Row="3" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
         <Line Grid.Row="4" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
+        <Line Grid.Row="5" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
 
-        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Width="Auto" Height="Auto" Margin="0,6,0,6">
+
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button x:Name="ukoncitHruButton" Content="vzdát se" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" >
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                            <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button x:Name="napovedaAButton" Content="1/2" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" >
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid Width="Auto" Height="Auto" x:Name="Grid">
+                            <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z" />
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" x:Name="TextBlock" Text="{TemplateBinding Content}" TextWrapping="Wrap" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" FontStyle="{TemplateBinding FontStyle}" FontWeight="{TemplateBinding FontWeight}" FontStretch="{TemplateBinding FontStretch}" Foreground="{TemplateBinding Foreground}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+
+
+
+        <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Width="Auto" Height="Auto" Margin="0,6,0,6">
             <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L6 42 L58 42 L60 32 L58 22 L6 22 Z"/>
             <TextBlock x:Name="otazkaTextBlock" Text="Co spadlo podle pověsti na hlavu Newtonovi a pomohlo mu formulovat jeho slavný zákon? Co spadlo podle pověsti na hlavu Newtonovi a pomohlo mu formulovat jeho slavný zákon?" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="14" FontWeight="Bold" />
         </Grid>
 
-        <Button x:Name="moznostAButton" Grid.Row="3" Grid.Column="1" Content="harmonika v ruce piráta" Margin="0,6,6,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostAButton_Click" >
+        <Button x:Name="moznostAButton" Grid.Row="4" Grid.Column="1" Content="harmonika v ruce piráta" Margin="0,6,6,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostAButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -104,7 +132,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="moznostBButton" Grid.Row="3" Grid.Column="2" Content="harmonika" Margin="6,6,0,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostBButton_Click" >
+        <Button x:Name="moznostBButton" Grid.Row="4" Grid.Column="2" Content="harmonika" Margin="6,6,0,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostBButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -115,7 +143,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="moznostCButton" Grid.Row="4" Grid.Column="1" Content="harmonika" Margin="0,6,6,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostCButton_Click" >
+        <Button x:Name="moznostCButton" Grid.Row="5" Grid.Column="1" Content="harmonika" Margin="0,6,6,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostCButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -126,7 +154,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="moznostDButton" Grid.Row="4" Grid.Column="2" Content="harmonika" Margin="6,6,0,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostDButton_Click" >
+        <Button x:Name="moznostDButton" Grid.Row="5" Grid.Column="2" Content="harmonika" Margin="6,6,0,6" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Click="moznostDButton_Click" >
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Grid Width="Auto" Height="Auto" x:Name="Grid">
