@@ -46,11 +46,25 @@ namespace Melichar_Milionar
 
         private List<Hrac> seradHrace(List<Hrac> neserazeniHraci)
         {
-            List<Hrac> serazeniHraci = new List<Hrac>();
+            Hrac[] hraci = neserazeniHraci.ToArray();
 
+            for (int i = 0; i < hraci.Length - 1; i++) //selection sort
+            {
+                int pivot = i;
 
+                for (int j = i + 1; j < hraci.Length; j++)
+                {
+                    if (hraci[j].Skore > hraci[pivot].Skore) {
+                        pivot = j;
+                    }
+                }
 
-            return serazeniHraci;
+                Hrac pom = hraci[pivot];
+                hraci[pivot] = hraci[i];
+                hraci[i] = pom;
+            }
+
+            return new List<Hrac>(hraci);
         }
     }
 }
