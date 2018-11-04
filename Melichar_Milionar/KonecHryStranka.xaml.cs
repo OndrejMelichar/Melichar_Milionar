@@ -48,6 +48,8 @@ namespace Melichar_Milionar
             Souborovator souborovator = new Souborovator();
             souborovator.UlozHrace(hrac);
 
+            App.Uroven = 1;
+
             hlavniFrame.Navigate(new Menu(hlavniFrame));
         }
     }

@@ -42,7 +42,8 @@ namespace Melichar_Milionar
             foreach(Hrac hrac in hraci)
             {
                 ObalUserControl uc = new ObalUserControl();
-                uc.textPrvku.Text = hrac.Jmeno;
+                uc.jmenoTextBlock.Text = hrac.Jmeno;
+                uc.skoreTextBlock.Text = hrac.Skore.ToString();
                 statistikyStackPanel.Children.Add(uc);
 
             }

@@ -7,7 +7,8 @@
       xmlns:control = "clr-namespace:XAMLUserControl" 
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="StatistikyStranka">
+      Title="StatistikyStranka"
+      Background="DarkSlateGray">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -23,9 +24,18 @@
             <ColumnDefinition Width="1*" MinWidth="144" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="3" Grid.Column="1" x:Name="statistikyStackPanel" Orientation="Vertical">
-            
-        </StackPanel>
+        <ScrollViewer Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="3" x:Name="statistikyScrollViewer">
+            <StackPanel x:Name="statistikyStackPanel" Orientation="Vertical">
+
+                <Grid HorizontalAlignment="Center" Width="auto" Height="Auto" Margin="0,36,0,36">
+                    <Line Grid.Row="1" Grid.Column="0" Fill="White" Grid.ColumnSpan="4" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
+                    <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="360" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L10 42 L54 42 L60 32 L54 22 L10 22 Z"/>
+                    <TextBlock x:Name="otazkaTextBlock" Text="Statistiky" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="28" FontWeight="Bold" />
+                </Grid>
+
+            </StackPanel>
+        </ScrollViewer>
+        
 
     </Grid>
 </Page>

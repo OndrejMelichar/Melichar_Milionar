@@ -6,10 +6,16 @@
    mc:Ignorable = "d" d:DesignHeight = "300" d:DesignWidth = "300">
 
     <Grid>
-        <Grid HorizontalAlignment="Center" Width="360" Height="Auto">
-            <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L10 42 L54 42 L60 32 L54 22 L10 22 Z"/>
-            <TextBlock x:Name="textPrvku" Text="{Binding text}" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="28" FontWeight="Bold" />
+        <Grid HorizontalAlignment="Center" Width="auto" Height="Auto" Margin="0,0,0,24">
+            <Line Fill="White" Width="60" Margin="400,0,0,0" X1="0" X2="100" Stretch="Fill" Stroke="White" StrokeThickness="2" />
+            
+            <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="360" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L10 42 L54 42 L60 32 L54 22 L10 22 Z"/>
+            <TextBlock x:Name="jmenoTextBlock" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="20" />
+
+            <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="500,0,0,0" Width="60" Height="Auto" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L16 42 L48 42 L60 32 L48 22 L16 22 Z"/>
+            <TextBlock x:Name="skoreTextBlock" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,0,0,0" TextWrapping="Wrap" FontSize="20" />
         </Grid>
+
     </Grid>
 
 </UserControl>
