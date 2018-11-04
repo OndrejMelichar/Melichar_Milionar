@@ -71,6 +71,7 @@ namespace Melichar_Milionar
             }
             else
             {
+                this.zpracujSkore();
                 hlavniFrame.Navigate(new KonecHryStranka(hlavniFrame));
             }
         }
@@ -93,6 +94,20 @@ namespace Melichar_Milionar
             moznostBButton.Content = randomizovaneOdpovedi[1];
             moznostCButton.Content = randomizovaneOdpovedi[2];
             moznostDButton.Content = randomizovaneOdpovedi[3];
+        }
+
+        private void zpracujSkore()
+        {
+            if (App.Uroven > 10)
+            {
+                App.Uroven = 11;
+            } else if (App.Uroven > 5)
+            {
+                App.Uroven = 6;
+            } else
+            {
+                App.Uroven = 1;
+            }
         }
 
 
