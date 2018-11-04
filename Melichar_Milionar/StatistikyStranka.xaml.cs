@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using XAMLUserControl;
 
 namespace Melichar_Milionar
 {
@@ -40,7 +41,8 @@ namespace Melichar_Milionar
 
             foreach(Hrac hrac in hraci)
             {
-
+                ObalUserControl obal = new ObalUserControl();
+                obal.pokus = "PES";
             }
         }
 

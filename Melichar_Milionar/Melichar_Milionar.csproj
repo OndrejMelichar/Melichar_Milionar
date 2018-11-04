@@ -65,6 +65,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Hrac.cs" />
+    <Compile Include="ObalUserControl.xaml.cs">
+      <DependentUpon>ObalUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Souborovator.cs" />
     <Compile Include="StatistikyStranka.xaml.cs">
       <DependentUpon>StatistikyStranka.xaml</DependentUpon>
@@ -96,6 +99,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ObalUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
