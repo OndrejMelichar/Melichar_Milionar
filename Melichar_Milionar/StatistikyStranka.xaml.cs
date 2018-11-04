@@ -34,6 +34,8 @@ namespace Melichar_Milionar
             this.vykresliStatistiku();
         }
 
+
+
         private void vykresliStatistiku()
         {
             Souborovator souborovator = new Souborovator();
