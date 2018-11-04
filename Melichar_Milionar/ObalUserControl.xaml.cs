@@ -9,21 +9,11 @@ namespace XAMLUserControl
     /// Interaction logic for MyUserControl.xaml
     /// </summary> 
 
-    public partial class ObalUserControl : UserControl, INotifyPropertyChanged
+    public partial class ObalUserControl : UserControl
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private string Pokus;
-
         public ObalUserControl()
         {
             InitializeComponent();
-        }
-
-        public string pokus
-        {
-            get { return Pokus; }
-            set { Pokus = value; }
         }
     }
 }

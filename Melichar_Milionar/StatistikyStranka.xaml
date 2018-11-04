@@ -23,7 +23,9 @@
             <ColumnDefinition Width="1*" MinWidth="144" />
         </Grid.ColumnDefinitions>
 
-        <control:ObalUserControl Grid.Row="3" Grid.Column="1" />
+        <StackPanel Grid.Row="3" Grid.Column="1" x:Name="statistikyStackPanel" Orientation="Vertical">
+            
+        </StackPanel>
 
     </Grid>
 </Page>

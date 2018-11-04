@@ -7,8 +7,8 @@
 
     <Grid>
         <Grid HorizontalAlignment="Center" Width="360" Height="Auto">
-            <!--<Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L10 42 L54 42 L60 32 L54 22 L10 22 Z"/>-->
-            <TextBlock x:Name="textPrvku" Text="{Binding pokus}" Foreground="Black" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="28" FontWeight="Bold" />
+            <Path Stroke="White" StrokeThickness="2" Fill="DarkBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" Width="Auto" Height="Auto" x:Name="Path" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Data="M4 32 L10 42 L54 42 L60 32 L54 22 L10 22 Z"/>
+            <TextBlock x:Name="textPrvku" Text="{Binding text}" Foreground="White" Padding="12" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" FontSize="28" FontWeight="Bold" />
         </Grid>
     </Grid>
 

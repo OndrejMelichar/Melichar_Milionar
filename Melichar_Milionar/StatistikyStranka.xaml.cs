@@ -41,8 +41,10 @@ namespace Melichar_Milionar
 
             foreach(Hrac hrac in hraci)
             {
-                ObalUserControl obal = new ObalUserControl();
-                obal.pokus = "PES";
+                ObalUserControl uc = new ObalUserControl();
+                uc.textPrvku.Text = hrac.Jmeno;
+                statistikyStackPanel.Children.Add(uc);
+
             }
         }
 
