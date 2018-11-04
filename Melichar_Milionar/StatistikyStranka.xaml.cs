@@ -40,12 +40,13 @@ namespace Melichar_Milionar
         {
             Souborovator souborovator = new Souborovator();
             List<Hrac> hraci = this.seradHrace(souborovator.NactiHrace());
+            List<string> castky = new List<string>() {"0", "1 000", "2 000", "3 000", "5 000", "10 000", "20 000", "40 000", "80 000", "160 000", "320 000", "640 000", "1 250 000", "2 500 000", "5 000 000", "10 000 000" };
 
             foreach(Hrac hrac in hraci)
             {
                 ObalUserControl uc = new ObalUserControl();
                 uc.jmenoTextBlock.Text = hrac.Jmeno;
-                uc.skoreTextBlock.Text = hrac.Skore.ToString();
+                uc.skoreTextBlock.Text = castky[hrac.Skore] + " Kč";
                 statistikyStackPanel.Children.Add(uc);
 
             }
