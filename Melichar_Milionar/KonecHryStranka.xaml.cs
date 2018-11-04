@@ -32,6 +32,13 @@ namespace Melichar_Milionar
             this.hlavniFrame = hlavniFrame;
         }
 
+        public KonecHryStranka(Frame hlavniFrame, string zprava) : this()
+        {
+            this.hlavniFrame = hlavniFrame;
+            
+            nadpisTextBlock.Text = zprava;
+        }
+
         private void pokracovatButton_Click(object sender, RoutedEventArgs e)
         {
             Hrac hrac = new Hrac();
@@ -42,7 +49,9 @@ namespace Melichar_Milionar
                 hrac.Jmeno = "Bezejmenný";
             }
 
-            hrac.Skore = App.Uroven;
+            
+            hrac.Skore = App.Uroven - 1;
+
             hrac.Datum = DateTime.Now.ToString("dd. MM. yyyy hh:mm:ss");
 
             Souborovator souborovator = new Souborovator();

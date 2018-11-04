@@ -47,39 +47,52 @@ namespace Melichar_Milionar
 
             if (otazka != null)
             {
-                List<string> randomizovaneOdpovedi = this.otazkovator.RandomizujOdpovedi(otazka.Odpovedi);
-
-                otazkaTextBlock.Text = otazka.TextOtazky;
-                moznostAButton.Content = randomizovaneOdpovedi[0];
-                moznostBButton.Content = randomizovaneOdpovedi[1];
-                moznostCButton.Content = randomizovaneOdpovedi[2];
-                moznostDButton.Content = randomizovaneOdpovedi[3];
-
+                this.posunCastku();
+                this.vykresliTlacitkaMoznosti(otazka);
                 this.obnovTlacitkaMoznosti();
             } else
             {
-                //došly otázky
+                if (App.Uroven == this.listUrovni.Count + 1)
+                {
+                    hlavniFrame.Navigate(new KonecHryStranka(hlavniFrame, "Gratuluji!"));
+                } else
+                {
+                    hlavniFrame.Navigate(new KonecHryStranka(hlavniFrame, "Došly otázky!"));
+                }
             }
         }
-
-
 
         private void vyhodnotOdpoved(int zvolenaMoznost)
         {
             if (zvolenaMoznost == this.otazkovator.IndexSpravneOdpovedi)
             {
-                if (App.Uroven < this.listUrovni.Count)
-                {
-                    App.Uroven++;
-                    this.listUrovni[App.Uroven - 1].Opacity = 1;
-                    this.listUrovni[App.Uroven - 2].Opacity = 0;
-
-                    this.dalsiOtazka();
-                }
-            } else
+                App.Uroven++;
+                this.dalsiOtazka();
+            }
+            else
             {
                 hlavniFrame.Navigate(new KonecHryStranka(hlavniFrame));
             }
+        }
+
+        private void posunCastku()
+        {
+            if (App.Uroven > 1)
+            {
+                this.listUrovni[App.Uroven - 1].Opacity = 1;
+                this.listUrovni[App.Uroven - 2].Opacity = 0;
+            }
+        }
+
+        private void vykresliTlacitkaMoznosti(Otazka otazka)
+        {
+            List<string> randomizovaneOdpovedi = this.otazkovator.RandomizujOdpovedi(otazka.Odpovedi);
+
+            otazkaTextBlock.Text = otazka.TextOtazky;
+            moznostAButton.Content = randomizovaneOdpovedi[0];
+            moznostBButton.Content = randomizovaneOdpovedi[1];
+            moznostCButton.Content = randomizovaneOdpovedi[2];
+            moznostDButton.Content = randomizovaneOdpovedi[3];
         }
 
 
@@ -92,17 +105,7 @@ namespace Melichar_Milionar
             {
                 List<Button> tlacitka = new List<Button>() { moznostAButton, moznostBButton, moznostCButton, moznostDButton };
 
-                int nahodnyIndex;
-
-                while (true)
-                {
-                    nahodnyIndex = this.random.Next(4);
-
-                    if (nahodnyIndex != this.otazkovator.IndexSpravneOdpovedi)
-                    {
-                        break;
-                    }
-                }
+                int nahodnyIndex = this.vratIndexNahodneSpatneOdpovedi();
 
                 foreach (Button tlacitko in tlacitka)
                 {
@@ -115,6 +118,21 @@ namespace Melichar_Milionar
                         napovedaAButton.IsEnabled = false;
                         napovedaAButton.Opacity = 0.2;
                     }
+                }
+            }
+        }
+
+        private int vratIndexNahodneSpatneOdpovedi()
+        {
+            int nahodnyIndex;
+
+            while (true)
+            {
+                nahodnyIndex = this.random.Next(4);
+
+                if (nahodnyIndex != this.otazkovator.IndexSpravneOdpovedi)
+                {
+                    return nahodnyIndex;
                 }
             }
         }
@@ -156,7 +174,7 @@ namespace Melichar_Milionar
 
         private void ukoncitHruButton_Click(object sender, RoutedEventArgs e)
         {
-
+            hlavniFrame.Navigate(new KonecHryStranka(hlavniFrame, "Jistota je jistota"));
         }
 
         
