@@ -26,7 +26,7 @@
             <ColumnDefinition Width="1*" MinWidth="144" />
         </Grid.ColumnDefinitions>
 
-        <MediaElement Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Source="D:\Stažené soubory\MVI_2606.MOV" />
+        <local:Animace1 Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
 
         <Grid Grid.Row="2" Grid.Column="3" Width="Auto" HorizontalAlignment="Right" Margin="12,0">
             <Grid.RowDefinitions>
