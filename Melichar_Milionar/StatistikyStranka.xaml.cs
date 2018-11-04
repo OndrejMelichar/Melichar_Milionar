@@ -71,5 +71,10 @@ namespace Melichar_Milionar
 
             return new List<Hrac>(hraci);
         }
+
+        private void zpetButton_Click(object sender, RoutedEventArgs e)
+        {
+            hlavniFrame.Navigate(new Menu(hlavniFrame));
+        }
     }
 }

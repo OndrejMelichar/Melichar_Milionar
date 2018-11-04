@@ -35,7 +35,8 @@ namespace Melichar_Milionar
         public HraStranka(Frame hlavniFrame) : this() //volá instanci bez parametru
         {
             this.hlavniFrame = hlavniFrame;
-            listUrovni = new List<Path>(new Path[] { zvyrazneni15Path, zvyrazneni14Path, zvyrazneni13Path, zvyrazneni12Path, zvyrazneni11Path, zvyrazneni10Path, zvyrazneni9Path, zvyrazneni8Path, zvyrazneni7Path, zvyrazneni6Path, zvyrazneni5Path, zvyrazneni4Path, zvyrazneni3Path, zvyrazneni2Path, zvyrazneni1Path });
+            this.listUrovni = new List<Path>(new Path[] { zvyrazneni15Path, zvyrazneni14Path, zvyrazneni13Path, zvyrazneni12Path, zvyrazneni11Path, zvyrazneni10Path, zvyrazneni9Path, zvyrazneni8Path, zvyrazneni7Path, zvyrazneni6Path, zvyrazneni5Path, zvyrazneni4Path, zvyrazneni3Path, zvyrazneni2Path, zvyrazneni1Path });
+            App.NapovedaA = true;
         }
 
 
@@ -53,6 +54,8 @@ namespace Melichar_Milionar
                 moznostBButton.Content = randomizovaneOdpovedi[1];
                 moznostCButton.Content = randomizovaneOdpovedi[2];
                 moznostDButton.Content = randomizovaneOdpovedi[3];
+
+                this.obnovTlacitkaMoznosti();
             } else
             {
                 //došly otázky
@@ -81,6 +84,56 @@ namespace Melichar_Milionar
 
 
 
+
+
+        private void napovedaAButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (App.NapovedaA == true)
+            {
+                List<Button> tlacitka = new List<Button>() { moznostAButton, moznostBButton, moznostCButton, moznostDButton };
+
+                int nahodnyIndex;
+
+                while (true)
+                {
+                    nahodnyIndex = this.random.Next(4);
+
+                    if (nahodnyIndex != this.otazkovator.IndexSpravneOdpovedi)
+                    {
+                        break;
+                    }
+                }
+
+                foreach (Button tlacitko in tlacitka)
+                {
+                    if ((tlacitka.IndexOf(tlacitko) != this.otazkovator.IndexSpravneOdpovedi) && (tlacitka.IndexOf(tlacitko) != nahodnyIndex))
+                    {
+                        App.NapovedaA = false;
+
+                        tlacitko.IsEnabled = false;
+                        tlacitko.Opacity = 0.2;
+                        napovedaAButton.IsEnabled = false;
+                        napovedaAButton.Opacity = 0.2;
+                    }
+                }
+            }
+        }
+
+        private void obnovTlacitkaMoznosti()
+        {
+            List<Button> tlacitka = new List<Button>() { moznostAButton, moznostBButton, moznostCButton, moznostDButton };
+
+            foreach (Button tlacitko in tlacitka)
+            {
+                tlacitko.IsEnabled = true;
+                tlacitko.Opacity = 1;
+            }
+        }
+
+
+
+
+
         private void moznostAButton_Click(object sender, RoutedEventArgs e)
         {
             this.vyhodnotOdpoved(0);
@@ -100,5 +153,13 @@ namespace Melichar_Milionar
         {
             this.vyhodnotOdpoved(3);
         }
+
+        private void ukoncitHruButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        
+
     }
 }

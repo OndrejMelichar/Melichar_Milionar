@@ -91,7 +91,7 @@
 
 
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
-            <Button x:Name="ukoncitHruButton" Content="vzdát se" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" >
+            <Button x:Name="ukoncitHruButton" Content="vzdát se" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" Click="ukoncitHruButton_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid Width="Auto" Height="Auto" x:Name="Grid">
@@ -102,7 +102,7 @@
                 </Button.Template>
             </Button>
 
-            <Button x:Name="napovedaAButton" Content="1/2" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" >
+            <Button x:Name="napovedaAButton" Content="1/2" Width="80" Margin="6,0,6,0" Foreground="White" FontSize="14" Padding="12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="120" BorderBrush="sc#1, 0, 0, 0" Cursor="Hand" Click="napovedaAButton_Click" >
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid Width="Auto" Height="Auto" x:Name="Grid">

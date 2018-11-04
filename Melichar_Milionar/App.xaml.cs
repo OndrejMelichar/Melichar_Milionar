@@ -14,5 +14,6 @@ namespace Melichar_Milionar
     public partial class App : Application
     {
         public static int Uroven = 1;
+        public static bool NapovedaA = true;
     }
 }
