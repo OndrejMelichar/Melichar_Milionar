@@ -162,5 +162,8 @@
   <ItemGroup>
     <Resource Include="data\ikona.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\cechA.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
