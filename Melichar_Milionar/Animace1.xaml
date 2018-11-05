@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
 
         <Canvas>
-            <Image x:Name="obrazek1" Source="D:\Ondřej Melichar\Moje data\škola\3. ročník\VAH\WPF\cechA.png" Canvas.Top="0" Canvas.Left="0"/>
+            <Image x:Name="obrazek1" Source="data\cechA.png" Canvas.Top="0" Canvas.Left="0"/>
         </Canvas>
     </Grid>
     

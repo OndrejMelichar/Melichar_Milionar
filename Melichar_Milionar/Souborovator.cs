@@ -12,13 +12,16 @@ namespace Melichar_Milionar
     class Souborovator
     {
 
+        private string otazkyCesta = "data/otazky.xlsx";
+        private string statistikyCesta = "statistiky.json";
+
         public List<Otazka> NactiOtazky()
         {
             List<Otazka> otazky = new List<Otazka>();
 
-            if (File.Exists(@"otazky.xlsx"))
+            if (File.Exists(this.otazkyCesta))
             {
-                var package = new ExcelPackage(new FileInfo(@"otazky.xlsx"));
+                var package = new ExcelPackage(new FileInfo(this.otazkyCesta));
                 ExcelWorksheet workSheet = package.Workbook.Worksheets["List1"];
                 var start = workSheet.Dimension.Start;
                 var end = workSheet.Dimension.End;
@@ -70,19 +73,19 @@ namespace Melichar_Milionar
             };
 
             string json = JsonConvert.SerializeObject(statistiky, settings);
-            File.WriteAllText(@"statistiky.json", json);
+            File.WriteAllText(this.statistikyCesta, json);
         }
 
         public List<Hrac> NactiHrace()
         {
-            if (File.Exists(@"statistiky.json"))
+            if (File.Exists(this.statistikyCesta))
             {
                 JsonSerializerSettings settings = new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.All
                 };
 
-                string jsonFromFile = File.ReadAllText(@"statistiky.json");
+                string jsonFromFile = File.ReadAllText(this.statistikyCesta);
 
                 return JsonConvert.DeserializeObject<List<Hrac>>(jsonFromFile, settings);
             }
